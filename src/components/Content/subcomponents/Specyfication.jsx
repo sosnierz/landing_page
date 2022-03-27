@@ -1,10 +1,8 @@
 import React from 'react';
 
-import './Specyfication.css';
-
-const Specyfication = () => {
+const Specyfication = ({ specyficationVisible }) => {
   return (
-    <div>
+    <div className={specyficationVisible ? 'specyfication show' : 'specyfication hide'}>
       <h3>Podnosimy standardy!</h3>
       <ul>
         <li>

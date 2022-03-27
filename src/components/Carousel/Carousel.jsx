@@ -34,6 +34,7 @@ const Carousel = () => {
         onClick={() => {currImg > 0 && setCurrImg(currImg - 1);}}>
         <FontAwesomeIcon icon={faCircleChevronLeft} />
         </div>
+        <div className='center'></div>
         <div
         className="right"
         onClick={() => {currImg < images.length - 1 && setCurrImg(currImg + 1);}}>

@@ -1,10 +1,9 @@
 import React from 'react';
 
-import './Opinions.css';
 
-const Opinons = () => {
+const Opinons = ({ opinionsVisible }) => {
     return ( 
-    <div>
+    <div className={opinionsVisible ? 'opinions show' : 'opinion hide'}>
         <h3>Opinie klientów</h3>
         <div>
           <h4>Aleksandra:</h4>
