@@ -1,0 +1,11 @@
+header {
+    grid-column: span 12;
+    text-align: center;
+}
+header nav a{
+    display: block;
+}
+header nav a img {
+    max-width: 400px;
+    max-height: 120px;
+}

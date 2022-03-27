@@ -1,0 +1,156 @@
+/* all content */
+.content {
+    grid-column: 2/11; 
+    min-height: 70%; 
+}
+.content h1 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/* specyfic side */
+.left, .middle, .right{
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.left,.right{
+    border-top: 1px solid;
+}
+
+/* left side  */
+.left h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-top: 25px;
+}
+.left p:first-child {
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin:40px 0;
+}
+.btn{
+    margin: 50px 0;
+}
+.left div button {
+   display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    font-size: 24px;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    letter-spacing: 2px;
+    transition: all .25s;
+}
+.left div button:hover {
+    letter-spacing: 10px;
+}
+.attention{
+    padding:0 7px;  
+}
+.attention h3{
+    text-decoration: underline;
+}
+.attention h4{
+    text-transform: uppercase;  
+}
+ .left p.attention-wrapper{   
+    text-align: justify;
+    font-weight: 400;
+    border-style: inset;
+    margin-bottom: 0;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+
+/* right side */
+
+/* hide and show elements in container */
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+/* container */
+div.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+/* navigation */
+ul.main-menu {
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+    padding: 0.2em 0 0 0;
+}
+
+ul.main-menu > li {
+    box-sizing: border-box;
+    padding: 5px 2em;
+    margin: 1px;
+    transition: 0.5s linear all;
+    background: rgb(141, 141, 156);
+    color: black;
+    cursor: pointer;
+    font-size: 13px;
+    user-select: none;
+}
+ul.main-menu > li{
+    clip-path: polygon(10% 0%, 0% 100%, 95% 100%, 100% 50%, 95% 0%);
+    shape-outside: polygon(10% 0%, 0% 100%, 95% 100%, 100% 50%, 95% 0%);
+}
+ul.main-menu > li:nth-child(2) {
+    transform: translateX(-5%);
+}
+ul.main-menu > li:nth-child(3) {
+    transform: translateX(-10%)
+}
+ul.main-menu > li:nth-child(4) {
+    transform: translateX(-15%)
+}
+ul.main-menu>li:hover {
+    background: linear-gradient(to right, rgb(7, 28, 65), rgb(141, 141, 156));
+    color: white;
+}
+ul.main-menu .active {
+    color: white;
+    background:rgb(7, 28, 65);
+    font-size: 16px;
+}
+ul.main-menu>li.active:hover {
+    background:rgb(7, 28, 65);
+}
+
+div.right-wrapper {
+    margin-top: 40px;
+    padding: 0 7px;
+}
+/* info container */
+.info ol.lists {
+    text-align: justify;
+    line-height: 40px;
+}
+.info ol.lists li span {
+    font-weight: bold;
+}
+
+
