@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Opinons = ({ opinionsVisible }) => {
+const Opinons = () => {
     return ( 
-    <div className={opinionsVisible ? 'opinions show' : 'opinion hide'}>
+    <div className='opinions'>
         <h3>Opinie klientów</h3>
         <div>
           <h4>Aleksandra:</h4>

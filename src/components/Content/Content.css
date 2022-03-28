@@ -1,28 +1,60 @@
 /* all content */
 .content {
     grid-column: 2/11; 
-    min-height: 70%; 
-}
+  }
+  @media(max-width:1500px){
+    .content {
+        grid-column: 1/12; 
+      } 
+  }
 .content h1 {
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;
 }
 .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+    
 }
 
-/* specyfic side */
-.left, .middle, .right{
-    flex-basis: 33%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.left {
+    grid-column: 1/2;
 }
+.middle{
+    grid-column: 2/3;
+}
+.right{
+grid-column: 3/4;
+}
+@media(max-width: 1100px){
+    .content {
+        margin: 70px 10px
+      } 
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        grid-template-rows: repeat(2,1fr);
+     } 
+     .left {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .middle{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .right{
+    grid-column: 1/3;
+    grid-row: 2/3;
+
+    }
+}
+/* specyfic side */
+
 .left,.right{
     border-top: 1px solid;
+    text-align: center;
 }
 
 /* left side  */
@@ -46,11 +78,11 @@
     margin: 0 auto;
     padding: 10px 15px;
     font-size: 24px;
-    color: #333;
+    color: rgb(7, 28, 65);
     background-color: #fff;
     border: none;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
+    border-top: 2px solid rgb(141, 141, 156);
+    border-bottom: 2px solid rgb(141, 141, 156);
     letter-spacing: 2px;
     transition: all .25s;
 }
@@ -74,19 +106,13 @@
     padding: 10px;
     font-size: 15px;
     letter-spacing: 2px;
+    color: rgb(7, 28, 65);
 }
 
 
 
 /* right side */
 
-/* hide and show elements in container */
-.hide {
-    display: none;
-}
-.show {
-    display: block;
-}
 
 /* container */
 div.container {
@@ -98,14 +124,16 @@ div.container {
 /* navigation */
 ul.main-menu {
     display: flex;
+    align-items: stretch;
+    justify-content: center;
     list-style: none;
-    margin: auto 0;
+    margin: auto;
     padding: 0.2em 0 0 0;
 }
 
 ul.main-menu > li {
     box-sizing: border-box;
-    padding: 5px 2em;
+    padding: 10px 15px;
     margin: 1px;
     transition: 0.5s linear all;
     background: rgb(141, 141, 156);
@@ -153,4 +181,29 @@ div.right-wrapper {
     font-weight: bold;
 }
 
+/* specyfication container */
+.specyfication ul, .authors ul  {
+        list-style-type: none;
+        text-align: left;
+        margin-top: 20px;
+        padding: 5px;
+}
+.specyfication ul li {
+   margin-top: 12px;
+}
+.specyfication ul li span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
+/* authors container */
+.authors p {
+    text-align: justify;
+}
+.authors ul{
+    text-align: center;
+}
+.authors ul li {
+    letter-spacing: 2px;
+    margin-top: 15px;
+}

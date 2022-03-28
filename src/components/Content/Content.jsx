@@ -1,16 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from '../Carousel/Carousel';
 import './Content.css';
 import Authors from './subcomponents/Authors';
-import Opinons from './subcomponents/Opinions';
+import Opinions from './subcomponents/Opinions';
 import Specyfication from './subcomponents/Specyfication';
 import Info from './subcomponents/Info';
 import LeftContent from './subcomponents/LeftContent';
 
 
+
 const Content = () => {
-  
+  const [section, setSection] = useState('info');
+  const [isActive, setIsActive] = useState(false)
  
+  const toggleContent = (status) => {
+    setSection(status);
+    setIsActive(!isActive);
+    console.log(section)
+  }
+  
+
+
+  const switchContent = (value) => {
+    switch (value) {
+      case 'info':
+        return <Info />;
+      case 'specyfication':
+        return <Specyfication />;
+      case 'authors':
+        return <Authors />
+      case 'opinions':
+        return <Opinions />;
+      default:
+        return null;
+    }
+  }
+
 
   return (
     <section className='content'>
@@ -24,17 +49,14 @@ const Content = () => {
           <div className='container'>
             <nav className='menu'>
                 <ul className='main-menu'>
-                    <li className={isActive ? 'active' : ''} isActiveonClick={handleInfo}>Co nowego?</li>
-                    <li className={isActive ? 'active' : ''} onClick={handleSpecyfication}>Specyfikacja</li>
-                    <li className={isActive ? 'active' : ''} onClick={handleAuthors}>Autorzy</li>
-                    <li className={isActive ? 'active' : ''} onClick={handleOpinions}>Opinie</li>
+                    <li className={section ==='info' ? 'active' : null} onClick={() =>toggleContent('info')}>Co nowego?</li>
+                    <li className={section ==='specyfication' ? 'active' : null} onClick={() =>toggleContent('specyfication')}>Specyfikacja</li>
+                    <li className={section ==='authors' ? 'active' : null} onClick={() =>toggleContent('authors')}>Autorzy</li>
+                    <li className={section ==='opinions' ? 'active' : null} onClick={() =>toggleContent('opinions')}>Opinie</li>
                 </ul>
             </nav>
             <div className='right-wrapper'>         
-                <Info infoVisible={infoVisible}/>
-                <Specyfication specyficationVisible = {specyficationVisible} />
-                <Authors authorsVisible = {authorsVisible}/>
-                <Opinons opinionsVisible = {opinionsVisible}/>
+                {switchContent(section)}
             </div>
           </div> 
         </article>
