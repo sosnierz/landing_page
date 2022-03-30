@@ -21,7 +21,7 @@ const LeftContent = () => {
       <h3>Czym Was zaskoczymy w tym roku?</h3>
       <h4>Nowa unikalna forma niezbędnika jakiego nie było!</h4>
       <p className='attention-wrapper'> 
-          Uwaga! Tym razem Niezbędnik <span>w zupełnie nowej osłonie i specjalnej formie.</span> Zwiększyliśmy objętność treści, gotowych materiałów i niezbędnych informacji, które przedadzą się podczas prowadzenia codziennych zajęć w roku szkolnym.
+          Uwaga! Tym razem Niezbędnik <span>w zupełnie nowej odsłonie i specjalnej formie.</span> Zwiększyliśmy objętność treści, gotowych materiałów i niezbędnych informacji, które przydadzą się podczas prowadzenia codziennych zajęć w roku szkolnym.
       </p>
    </div>
 </article> );

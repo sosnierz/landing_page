@@ -108,8 +108,9 @@ grid-column: 3/4;
     letter-spacing: 2px;
     color: rgb(7, 28, 65);
 }
-
-
+.left p.attention-wrapper span{  
+    text-decoration: underline;
+}
 
 /* right side */
 

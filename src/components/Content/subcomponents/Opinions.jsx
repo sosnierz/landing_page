@@ -7,7 +7,7 @@ const Opinons = () => {
         <h3>Opinie klientów</h3>
         <div>
           <h4>Aleksandra:</h4>
-          <p>Najlpszy planer dla nauczycieli! Ma faktycznie wszystko co niezbędne.</p>
+          <p>Najlepszy planer dla nauczycieli! Ma faktycznie wszystko co niezbędne.</p>
         </div>
         <div>
           <h4>Tomek:</h4>
